@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@font-face {
+    font-family: 'valoran';
+    src: url(fontes/Valorant\ Font.ttf)
+    format('truetype');
+}
 
 *{
     margin: 0;
@@ -6,10 +11,6 @@
     
 }
 
-body{
-    color: white;
-   
-}
 
 
 .nome{
@@ -17,7 +18,7 @@ body{
     background-image: linear-gradient(to top, rgb(247, 81, 206),#1403feb6);
     backdrop-filter: blur(10px);
     border-radius: 0px 0px 10px 10px;
-    font-family: 'Share Tech', sans-serif;
+    font-family: valoran, sans-serif;
     font-variant: small-caps;
     display: flex;
     flex-direction: column;
