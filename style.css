@@ -168,6 +168,9 @@ ion-icon#cima{
     font-size: 3em;
     transition: .4s;
 }
+ion-icon#cima:hover{
+    filter: drop-shadow(0 0 5px rgb(88, 88, 88));
+}
 
 ion-icon#baixo{
     margin-top: 70px;
