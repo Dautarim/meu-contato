@@ -17,7 +17,7 @@ body{
 
 .nome{
     height: 90vh;
-    background-image: linear-gradient(to top, rgb(247, 81, 206),#1403feb6);
+    background-color: rgb(36, 35, 35);
     backdrop-filter: blur(10px);
     border-radius: 0px 0px 10px 10px;
     font-family: valoran, sans-serif;
@@ -27,8 +27,9 @@ body{
     justify-content: space-around;
     align-items: center;
     justify-content: center;
-   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.658);
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.808);
   position: relative;
+
    
 }
 
@@ -37,23 +38,13 @@ body{
     width: 50vmax;
     font-size: 4vw;
     margin-top: 32px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.74);
+    transition-duration: .5s;
+}
+.mnome:hover{
+    filter: drop-shadow(0 0 5px white);
 }
 
-#baixo{
-    position: absolute;
-    bottom: 20px;
-    background-color: transparent;
-    text-align: center;
-    border: none;
-    margin-top: 30px;
-    color: white;
-}
-
-#baixo a > img{
-    padding: 7px;
-    width: 48px;
-}
 
 #cima{
     background-color: transparent;
@@ -164,4 +155,23 @@ a#em:hover{
     font-weight: bold;
    background-color: #D44136;
    border: 1px solid white;
+}
+
+ion-icon#cima{
+    color: black;
+    font-size: 3em;
+    transition: .4s;
+}
+
+ion-icon#baixo{
+    position: absolute;
+    left: 48.5%;
+    bottom: 10px;
+    font-size: 3em;
+    transition: .4s;
+    
+}
+
+ion-icon#baixo:hover{
+    filter: drop-shadow(0 0 5px white);
 }
