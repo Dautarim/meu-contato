@@ -183,4 +183,5 @@ ion-icon#baixo{
 
 ion-icon#baixo:hover{
     filter: drop-shadow(0 0 5px white);
+    transform: rotate(180deg);
 }
