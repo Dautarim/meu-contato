@@ -44,10 +44,49 @@ body{
     margin-top: 32px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.74);
     transition-duration: .5s;
+   
 }
+
 .mnome:hover{
-    filter: drop-shadow(0 0 5px white);
+   
+    animation:error .4s linear infinite ;
 }
+
+@keyframes error
+{
+    0%
+    {
+        text-shadow: .2rem 0rem red, -.2rem 0rem cyan; 
+    }
+
+    20%
+    {
+        text-shadow: 0rem -.2rem red, -.2rem 0rem cyan, 0rem .2rem rgb(217, 255, 0); 
+        
+    }
+
+    30%
+    {
+        text-shadow: .2rem 0rem red, -.2rem 0rem cyan, 0rem .2rem rgb(217, 255, 0); 
+    }
+
+    50%
+    {
+        text-shadow: -.2rem 0rem red, .2rem 0rem cyan; 
+    }
+
+    70%
+    {
+        text-shadow: .2rem 0rem red, -.2rem 0rem cyan, 0rem -.2rem rgb(217, 255, 0); 
+    }
+
+    100%
+    {
+        text-shadow: .2rem 0rem red, -.2rem 0rem cyan; 
+    }
+}
+
+
 
 
 #cima{
