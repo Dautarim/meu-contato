@@ -15,90 +15,110 @@ body{
     color: rgb(252, 252, 252);
 }
 
+body::-webkit-scrollbar
+{
+    width: 3px;
+    background: transparent;
+
+}
+
+
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 1px;
+    background: black;
+    background: linear-gradient(to top, #ee7752, #e73c7e, #23a6d5, #7F00FD) no-repeat;
+    background-size:  300% 300%;
+    animation: bacgradient 5s linear alternate infinite;
+}
+
+
 .nome{
     height: 90vh;
-    background-color: rgb(36, 35, 35);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #7F00FD) no-repeat;
+    background-size:  300% 300%;
     border-radius: 0px 0px 10px 10px;
     font-family: valoran, sans-serif;
-    font-variant: small-caps;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     justify-content: center;
-   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.808);
-  position: relative;
-  transition: .4s;
-
+    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.445);
+    position: relative;
+    transition: .4s;
+    animation: bacgradient 5s linear alternate infinite;
    
 }
-.nome:hover{
-    background-color: rgb(29, 28, 28);
+
+@keyframes bacgradient
+{
+    to
+    {
+        background-position: 100% 50%;
+    }
+
+}
+
+.caixa-de-img
+{
+    width: 300px;
+    height: auto;
+    background: #006199;
+    border-radius: 50%;
+    box-shadow: 0px 24px 74px rgba(0, 0, 0, 0.356);
+    animation: reveal 2.5s forwards ;
+}
+
+.caixa-de-img img
+{
+    width: 100%;
+    height: 100%;
 }
 
 .mnome{ 
     text-align: center;
-    width: 50vmax;
-    font-size: 4vw;
-    margin-top: 32px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.74);
-    transition-duration: .5s;
-   
+    width: 45vmax;
+    font-size: 32px;
+    margin-top: 32px; 
+    text-anchor: start;
+    animation: reveal 2s forwards ;
 }
 
-.mnome:hover{
-   
-    animation:error .4s linear infinite ;
+.mnome span
+{
+    margin-top: 5px;
+    display: block;
+    font-size: 20px;
+
+    animation: reveal 2s forwards ;
+    animation-delay: .8s;
+    transform: translateY(45px);
+    opacity: 0;
 }
 
-@keyframes error
+@keyframes reveal
 {
     0%
     {
-        text-shadow: .2rem 0rem red, -.2rem 0rem cyan; 
-    }
-
-    20%
-    {
-        text-shadow: 0rem -.2rem red, -.2rem 0rem cyan, 0rem .2rem rgb(217, 255, 0); 
-        
-    }
-
-    30%
-    {
-        text-shadow: .2rem 0rem red, -.2rem 0rem cyan, 0rem .2rem rgb(217, 255, 0); 
-    }
-
-    50%
-    {
-        text-shadow: -.2rem 0rem red, .2rem 0rem cyan; 
-    }
-
-    70%
-    {
-        text-shadow: .2rem 0rem red, -.2rem 0rem cyan, 0rem -.2rem rgb(217, 255, 0); 
+        transform: translateY(45px);
+        opacity: 0;
     }
 
     100%
     {
-        text-shadow: .2rem 0rem red, -.2rem 0rem cyan; 
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
-
-
 
 
 #cima{
     background-color: transparent;
     border: none;
     margin-top: 30px;
- 
 }
 
-#imcima{
-    width: 30px;
-}
+
 
 
 .contatos{
@@ -156,7 +176,7 @@ a#insta:hover{
 }
 
 a#link{
-    transition-duration: .5s;
+    transition:  .5s ease-in-out;
 }
 
 a#link:hover{
@@ -206,10 +226,23 @@ ion-icon#cima{
     color: black;
     font-size: 3em;
     transition: .4s;
+    animation: kikando 1s ease-in alternate infinite;
 }
-ion-icon#cima:hover{
-    filter: drop-shadow(0 0 5px rgb(88, 88, 88));
+
+@keyframes kikando
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+
+    0%
+    {
+        transform: translateY(-7px);
+    }
 }
+
+
 
 ion-icon#baixo{
     margin-top: 70px;
@@ -217,10 +250,48 @@ ion-icon#baixo{
     bottom: 10px;
     font-size: 3em;
     transition: .4s;
-    
+    animation: kikando 1s ease-out alternate infinite;
 }
 
-ion-icon#baixo:hover{
-    filter: drop-shadow(0 0 5px white);
-    transform: rotate(180deg);
+@keyframes kikando
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+
+    0%
+    {
+        transform: translateY(7px);
+    }
+}
+
+@media screen and (max-width: 773px) 
+{
+    .caixa-de-img
+    {
+        width: 250px;
+    }
+    .mnome
+    {
+        font-size: 22px; 
+    }
+
+    .mnome span
+{
+   
+    font-size: 18px;
+}
+
+.links p{
+    padding-left: 15px;
+}
+
+.links{
+    
+    
+    border: 1px solid rgb(0, 0, 0);
+    width: 60vw;
+   
+}
 }
